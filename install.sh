@@ -71,3 +71,9 @@ echo "OpenFaaS admin password: $PASSWORD"
 
 curl -sSL https://cli.openfaas.com | sudo -E sh
 
+sudo add-apt-repository ppa:longsleep/golang-backports -y
+sudo apt update -y
+sudo apt install golang-go -y
+
+go get github.com/rakyll/hey
+cp /root/go/bin/hey /usr/bin
